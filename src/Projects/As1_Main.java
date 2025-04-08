@@ -8,10 +8,10 @@ public class As1_Main {
     public static Scanner input = new Scanner( System.in );
 
 
-    public static void run(String[] args) {
+    public static void run() {
         System.out.println("Assign 1 Network Messages");
         ArrayList <As1_Message> allMessages = new ArrayList<>();
-        allMessages.add(new As1_Message("Server1: file not found"));
+  allMessages.add( new As1_Message("Client 1: Server not Found"));
         while (true) {
             System.out.println("\nWhat do you want to do?");
             System.out.println("1. Add Message");
@@ -25,10 +25,14 @@ public class As1_Main {
             if (option == 1) {
                 System.out.println("What message would you like to add");
                 String message = Library.input.nextLine();
+
                 allMessages.add(new As1_Message(message));
             } else if (option == 2) {
                 System.out.println("Security Message\tMachine ID \tMachine Type  ");
-                System.out.println();
+                for (int i = 0; i < allMessages.size(); i++) {
+                    System.out.println(allMessages.get(i).toString());
+
+                }
             } else if (option == 3) {
 
             } else if (option == 4) {
